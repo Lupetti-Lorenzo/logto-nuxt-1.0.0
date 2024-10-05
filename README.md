@@ -1,6 +1,6 @@
 # Nuxt Logto 1.0.0 Problems
 
-This repository is a minimal reproduction of the problems I encountered when trying to use the new version of the Logto library for Nuxt.
+This repository is a basic implementation of Logto in Nuxt using @logto/nuxt SDK, following the official guides. Here i explain the problems I encountered when trying to use the new version of the Logto library for Nuxt.
 
 To create this repository, I used the following commands:
 
