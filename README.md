@@ -1,75 +1,27 @@
-# Nuxt 3 Minimal Starter
+# Nuxt Logto 1.0.0
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
-
-## Setup
-
-Make sure to install the dependencies:
+To create this repository, I used the following commands:
 
 ```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
+npx nuxi@latest init logto-nuxt
+cd logto-nuxt
+npm install @logto/nuxt
 ```
 
-## Development Server
+Following the official guide [Logto Quick Start for Nuxt](https://docs.logto.io/quick-starts/nuxt/) up until [Implement Sign-in and Sign-out](https://docs.logto.io/quick-starts/nuxt/#implement-sign-in-and-sign-out) i implemented what is needed in nuxt.config.js and .env file.
 
-Start the development server on `http://localhost:3000`:
+The `app.vue` is taken from the example in the playground:
 
-```bash
-# npm
-npm run dev
+[github.com/logto-io/js/packages/nuxt/playground/app.vue](https://github.com/logto-io/js/blob/81e7884c2a10f4db8dc0ba020d44ade9f6eb5c52/packages/nuxt/playground/app.vue)
 
-# pnpm
-pnpm run dev
+After running `npm run dev`, I get the following errors:
 
-# yarn
-yarn dev
+**Server Error:**
 
-# bun
-bun run dev
-```
+![Server Error](server_error.png)
 
-## Production
+**Browser Error:**
 
-Build the application for production:
+![Browser Error](browser_error.png)
 
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## If you downgrade logto version from 1.0.0 to the prevous 0.3.4 it works fine
