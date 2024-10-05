@@ -1,4 +1,6 @@
-# Nuxt Logto 1.0.0
+# Nuxt Logto 1.0.0 Problems
+
+This repository is a minimal reproduction of the problems I encountered when trying to use the new version of the Logto library for Nuxt.
 
 To create this repository, I used the following commands:
 
@@ -8,7 +10,7 @@ cd logto-nuxt
 npm install @logto/nuxt
 ```
 
-Following the official guide [Logto Quick Start for Nuxt](https://docs.logto.io/quick-starts/nuxt/) up until [Implement Sign-in and Sign-out](https://docs.logto.io/quick-starts/nuxt/#implement-sign-in-and-sign-out) i implemented what is needed in nuxt.config.js and .env file.
+Following the official guide [Logto Quick Start for Nuxt](https://docs.logto.io/quick-starts/nuxt/) up until [Test the application](https://docs.logto.io/quick-starts/nuxt/#checkpoint-test-your-application) i implemented what is needed in nuxt.config.js and .env file.
 
 The `app.vue` is taken from the example in the playground:
 
@@ -24,4 +26,4 @@ After running `npm run dev`, I get the following errors:
 
 ![Browser Error](browser_error.png)
 
-## If you downgrade logto version from 1.0.0 to the prevous 0.3.4 it works fine
+## If you downgrade logto version from 1.0.0 to the prevous 0.3.4 will work as expected, showing a login button and if logged in showing the user info
