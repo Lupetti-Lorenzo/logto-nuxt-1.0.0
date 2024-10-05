@@ -26,4 +26,10 @@ After running `npm run dev`, I get the following errors:
 
 ![Browser Error](browser_error.png)
 
+When running `npm install`, I also noticed the following warning:
+
+```
+ WARN  [nuxt] Expected @nuxt/kit to be at least 3.13.2 but got 3.12.4. This might lead to unexpected behavior. Check your package.json or refresh your lockfile.
+```
+
 ## If you downgrade logto version from 1.0.0 to the prevous 0.3.4 will work as expected, showing a login button and if logged in showing the user info
