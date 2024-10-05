@@ -12,6 +12,8 @@ npm install @logto/nuxt
 
 Following the official guide [Logto Quick Start for Nuxt](https://docs.logto.io/quick-starts/nuxt/) up until [Test the application](https://docs.logto.io/quick-starts/nuxt/#checkpoint-test-your-application) i implemented what is needed in nuxt.config.js and .env file.
 
+I have a logto tenant with a test user, which I used to populate the .env variables.
+
 The `app.vue` is taken from the example in the playground:
 
 [github.com/logto-io/js/packages/nuxt/playground/app.vue](https://github.com/logto-io/js/blob/81e7884c2a10f4db8dc0ba020d44ade9f6eb5c52/packages/nuxt/playground/app.vue)
