@@ -12,7 +12,7 @@ export default defineNuxtConfig({
 			signOut: "/sign-out",
 			callback: "/callback",
 		},
-		resources: ["https://api-dev.menumal.com/"],
+		resources: [process.env.NUXT_LOGTO_API_RESOURCE!],
 		scopes: [UserScope.Profile, UserScope.Email, UserScope.Roles],
 	},
 
