@@ -14,7 +14,7 @@ await callOnce(async () => {
 	}
 
 	try {
-		accessToken.value = await client.getAccessToken();
+		accessToken.value = await client.getAccessToken("https://api-dev.menumal.com/");
 	} catch (error) {
 		console.error("Failed to get access token", error);
 	}

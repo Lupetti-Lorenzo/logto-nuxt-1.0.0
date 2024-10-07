@@ -1,3 +1,5 @@
+import { UserScope } from "@logto/nuxt";
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
 	compatibilityDate: "2024-04-03",
@@ -18,6 +20,7 @@ export default defineNuxtConfig({
 			appId: process.env.NUXT_LOGTO_APP_ID,
 			appSecret: process.env.NUXT_LOGTO_APP_SECRET,
 			cookieEncryptionKey: process.env.NUXT_LOGTO_COOKIE_ENCRYPTION_KEY,
+			customRedirectBaseUrl: undefined,
 		},
 	},
 });
