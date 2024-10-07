@@ -63,7 +63,7 @@ I made all this with the server and cookie because the appId, appSecret and the 
 
 To run this example, you will need to set up a `.env` file with your Logto configuration, as shown in the `.env.example` file.
 
-I have a logto tenant with a test user, which I used to populate the .env variables.
+I have a logto tenant with a test user, which I used to populate the .env variables. I also have a api resource, created via dashboard, and used to get the access token for that resource.
 
 The `app.vue` is taken from the example in the [playground](https://github.com/logto-io/js/blob/81e7884c2a10f4db8dc0ba020d44ade9f6eb5c52/packages/nuxt/playground/app.vue) inside the logto repository.
 
