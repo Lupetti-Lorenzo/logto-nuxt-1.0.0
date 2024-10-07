@@ -21,6 +21,10 @@ await callOnce(async () => {
 });
 
 const user = useLogtoUser();
+if(!user){
+	navigateTo("/sign-in");
+}
+
 </script>
 <template>
 	<div>

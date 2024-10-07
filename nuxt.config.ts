@@ -4,6 +4,7 @@ export default defineNuxtConfig({
 	devtools: { enabled: true },
 	modules: ["@logto/nuxt"],
 
+	// https://github.com/logto-io/js/blob/HEAD/packages/nuxt/src/runtime/utils/types.ts
 	logto: {
 		pathnames: {
 			signIn: "/sign-in",
@@ -11,13 +12,13 @@ export default defineNuxtConfig({
 			callback: "/callback",
 		},
 	},
-
 	runtimeConfig: {
 		logto: {
 			endpoint: process.env.NUXT_LOGTO_ENDPOINT,
 			appId: process.env.NUXT_LOGTO_APP_ID,
 			appSecret: process.env.NUXT_LOGTO_APP_SECRET,
 			cookieEncryptionKey: process.env.NUXT_LOGTO_COOKIE_ENCRYPTION_KEY,
+			customRedirectBaseUrl: undefined,
 		},
 	},
 });
