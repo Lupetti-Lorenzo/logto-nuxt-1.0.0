@@ -4,7 +4,7 @@ import { UserScope } from "@logto/nuxt";
 export default defineNuxtConfig({
 	compatibilityDate: "2024-04-03",
 	devtools: { enabled: true },
-	modules: ["@logto/nuxt"],
+	modules: ["@logto/nuxt", "@pinia/nuxt"],
 
 	logto: {
 		pathnames: {
@@ -12,6 +12,8 @@ export default defineNuxtConfig({
 			signOut: "/sign-out",
 			callback: "/callback",
 		},
+		resources: ["https://api-dev.menumal.com/"],
+		scopes: [UserScope.Profile, UserScope.Email, UserScope.Roles],
 	},
 
 	runtimeConfig: {
