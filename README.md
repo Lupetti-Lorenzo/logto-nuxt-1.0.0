@@ -4,24 +4,14 @@ This repository is created as a support example for the Logto development team t
 
 The [Logto documentation](https://docs.logto.io/quick-starts/nuxt/#fetch-access-token-for-the-api-resource) provides a very basic example of how to fetch the access token and store it using useState. However, this approach has limitations, especially when dealing with short-lived tokens and users who spend extended periods inside the application without refreshing the page.
 
-## Configuration
-
-To run this example, you will need to set up a `.env` file with your Logto configuration, as shown in the `.env.example` file.
-
-I have a logto tenant with a test user, which I used to populate the .env variables.
-
-The `app.vue` is taken from the example in the [playground](https://github.com/logto-io/js/blob/81e7884c2a10f4db8dc0ba020d44ade9f6eb5c52/packages/nuxt/playground/app.vue) inside the logto repository.
-
-The `nuxt.config.js` is made following the official [documentation](https://docs.logto.io/quick-starts/nuxt/)
-
 ## Problem Description
 
-The current approach outlined in the documentation can lead to `401 Unauthorized` errors if:
+The current approach outlined in the documentation can lead to `401 Unauthorized` from the api if:
 
 1. The access token has a short expiration time.
 2. Users remain in the app for a long time without refreshing the page.
 
-### Key Points:
+### Key Points
 
 - `client.getAccessToken()` uses a refresh strategy, which works perfectly when the page is first loaded, but does not address continuous access token refresh when the user stays in the app.
 - The `useLogtoClient()` composable is only available on the **server side** during SSR, so it cannot be used on the client side to refresh the token when it expires.
@@ -68,3 +58,13 @@ I also would like to know if there is a better way to handle this situation, as 
 ## Question
 
 I made all this with the server and cookie because the appId, appSecret and the env configuration is only available in the server side, but if is safe to include the appId and appSecret in the client side, I could make the call directly to logto from the client side, bypassing this cookie and server side call. Is this a safe approach? Or is better to keep the refresh token in the server side and make the call from there?
+
+## Configuration
+
+To run this example, you will need to set up a `.env` file with your Logto configuration, as shown in the `.env.example` file.
+
+I have a logto tenant with a test user, which I used to populate the .env variables.
+
+The `app.vue` is taken from the example in the [playground](https://github.com/logto-io/js/blob/81e7884c2a10f4db8dc0ba020d44ade9f6eb5c52/packages/nuxt/playground/app.vue) inside the logto repository.
+
+The `nuxt.config.js` is made following the official [documentation](https://docs.logto.io/quick-starts/nuxt/)
