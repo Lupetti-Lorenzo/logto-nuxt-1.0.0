@@ -4,6 +4,7 @@ import { useLogtoClient, useLogtoUser, useState, callOnce } from "#imports";
 const client = useLogtoClient();
 const accessToken = useState<string | undefined>("access-token");
 
+
 await callOnce(async () => {
 	if (!client) {
 		throw new Error("Logto client is not available");
