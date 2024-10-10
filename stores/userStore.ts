@@ -15,6 +15,7 @@ export const useUserStore = defineStore("userStore", {
 		// server side init on page load
 		async init(initUserStore: InitUserStore) {
 			this.roles = initUserStore.roles;
+			this.username = initUserStore.username;
 			this._accessToken = initUserStore.accessToken;
 			this._accessTokenExpires = initUserStore.accessTokenExpires;
 			// make call to backend /me to get context data using the access token

@@ -35,7 +35,7 @@ await callOnce(async () => {
 	cookieRefreshToken.value = refreshToken;
 
 	// get data from the jwt payload
-	const { roles, username, exp } = logtoUser.roles;
+	const { roles, username, exp } = logtoUser;
 	const accessTokenExpires = exp * 1000; // convert exp to milliseconds
 
 	userStore.init({
